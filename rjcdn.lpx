@@ -1,10 +1,10 @@
 #!name= CDN Fix
-#!desc= rewrite to upos-sz-mirrorcoso1.bilivideo.com
+#!desc= rewrite to upos-sz-mirror08c.bilivideo.com
 #!author= k
 #!tag= bilibili
 
 [Rewrite]
-^https?:\/\/(mcdn\.bilivideo\.(com|cn)|ppio\.bilivideo\.com|kodo\.bilivideo\.com|mountaintoys\.cn|szbdyd\.com|upos-sz-mirror08c\.bilivideo\.com)(:\d+)?\/ header https://upos-sz-mirrorcoso1.bilivideo.com/
+^https?:\/\/(mcdn\.bilivideo\.(com|cn)|ppio\.bilivideo\.com|kodo\.bilivideo\.com|mountaintoys\.cn|szbdyd\.com)(:\d+)?\/ header https://upos-sz-mirror08c.bilivideo.com/
 
 [MitM]
-hostname=mcdn.bilivideo.cn, mcdn.bilivideo.com, ppio.bilivideo.com, kodo.bilivideo.com, mountaintoys.cn ,szbdyd.com ,upos-sz-mirror08c.bilivideo.com
+hostname=mcdn.bilivideo.cn, mcdn.bilivideo.com, ppio.bilivideo.com, kodo.bilivideo.com, mountaintoys.cn ,szbdyd.com
