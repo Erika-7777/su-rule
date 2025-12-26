@@ -6,7 +6,7 @@
 [Rewrite]
 ^https?:\/\/(mcdn\.bilivideo\.(com|cn)|ppio\.bilivideo\.com|kodo\.bilivideo\.com|mountaintoys\.cn|szbdyd\.com|upos-sz-mirror08c\.bilivideo\.com)(:\d+)?\/ header https://upos-sz-mirrorcoso1.bilivideo.com/
 
-[MITM]
+[MitM]
 mcdn.bilivideo.cn
 mcdn.bilivideo.com
 ppio.bilivideo.com
