@@ -2,21 +2,11 @@
 #!desc= rewrite to upos-sz-mirrorcoso1.bilivideo.com
 #!author= k
 #!tag= bilibili
-[Rule]
-AND,((OR,(
-  (DOMAIN-SUFFIX,mcdn.bilivideo.cn),
-  (DOMAIN-SUFFIX,mcdn.bilivideo.com),
-  (DOMAIN,ppio.bilivideo.com),
-  (DOMAIN,kodo.bilivideo.com),
-  (DOMAIN,upos-sz-mirror08c.bilivideo.com),
-  (DOMAIN-SUFFIX,mountaintoys.cn),
-  (DOMAIN-SUFFIX,szbdyd.com)
-)),(PROTOCOL,QUIC)),REJECT-DROP
 
-[rewrite]
+[Rewrite]
 ^https?:\/\/(mcdn\.bilivideo\.(com|cn)|ppio\.bilivideo\.com|kodo\.bilivideo\.com|mountaintoys\.cn|szbdyd\.com|upos-sz-mirror08c\.bilivideo\.com)(:\d+)?\/ header https://upos-sz-mirrorcoso1.bilivideo.com/
 
-[mitm]
+[MITM]
 mcdn.bilivideo.cn
 mcdn.bilivideo.com
 ppio.bilivideo.com
