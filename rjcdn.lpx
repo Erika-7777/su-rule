@@ -1,62 +1,15 @@
-#!name=Reject CDN Domains
-#!desc=Reject listed CDN/ad domains 
-#!author=
-#!homepage=
-#!icon=
+#!name= CDN Fix
+#!desc= rewrite to upos-sz-mirrorcoso1.bilivideo.com
+#!author= k
+#!tag= bilibili
 
-[Rule]
-# B站
-HOST-SUFFIX,mcdn.bilivideo.cn,REJECT
-HOST-SUFFIX,mcdn.bilivideo.com,REJECT
-HOST-SUFFIX,ppio.bilivideo.com,REJECT
-HOST-SUFFIX,kodo.bilivideo.com,REJECT
-HOST-SUFFIX,mountaintoys.cn,REJECT
-HOST-SUFFIX,szbdyd.com,REJECT
+[rewrite]
+^https?:\/\/(mcdn\.bilivideo\.(com|cn)|ppio\.bilivideo\.com|kodo\.bilivideo\.com|mountaintoys\.cn|szbdyd\.com)(:\d+)?\/ header https://upos-sz-mirrorcoso1.bilivideo.com/
 
-# 腾讯
-HOST-SUFFIX,hcdn.video.qq.com,REJECT
-HOST-SUFFIX,pcdn.video.qq.com,REJECT
-HOST-SUFFIX,vodlive.qq.com,REJECT
-HOST-SUFFIX,iwan-s.video.qq.com,REJECT
-HOST-SUFFIX,gdt.qq.com,REJECT
-HOST-SUFFIX,cm.l.qq.com,REJECT
-HOST-SUFFIX,isure6.stream.qqmusic.qq.com,REJECT
-
-# 爱奇艺
-HOST-SUFFIX,hcdn.qiyi.com,REJECT
-HOST-SUFFIX,pdata.video.qiyi.com,REJECT
-HOST-SUFFIX,cachecdn.v.iqiyi.com,REJECT
-HOST-SUFFIX,meta-cdn.video.iq.com,REJECT
-HOST-SUFFIX,tpa-hcdn.iqiyi.com,REJECT
-HOST-SUFFIX,data6.video.iqiyi.com,REJECT
-
-# 优酷
-HOST-SUFFIX,atm.youku.com,REJECT
-HOST-SUFFIX,fvid.atm.youku.com,REJECT
-HOST-SUFFIX,html.atm.youku.com,REJECT
-HOST-SUFFIX,valb.atm.youku.com,REJECT
-HOST-SUFFIX,valf.atm.youku.com,REJECT
-HOST-SUFFIX,static.atm.youku.com,REJECT
-HOST-SUFFIX,valc.atm.youku.com,REJECT
-
-# 字节
-HOST-SUFFIX,pull-rtmp-l11.ixigua.com,REJECT
-HOST-SUFFIX,push-rtmp-l1.ixigua.com,REJECT
-HOST-SUFFIX,pull-hs-f5-hot.flive.douyincdn.com,REJECT
-
-# 斗鱼
-HOST-SUFFIX,p2p.douyucdn.cn,REJECT
-
-# 酷狗
-HOST-SUFFIX,trackercdn.kugou.com,REJECT
-HOST-SUFFIX,mobiletrackercdn.kugou.com,REJECT
-HOST-SUFFIX,d.kugou.com,REJECT
-
-# 网易云
-HOST-SUFFIX,163jiasu.com,REJECT
-HOST-SUFFIX,sf.163.com,REJECT
-
-# 其他
-HOST-SUFFIX,p-cdn.com,REJECT
-HOST-SUFFIX,pscdn.co,REJECT
-HOST-SUFFIX,p.scdn.co,REJECT
+[mitm]
+mcdn.bilivideo.cn
+mcdn.bilivideo.com
+ppio.bilivideo.com
+kodo.bilivideo.com
+mountaintoys.cn
+szbdyd.com
